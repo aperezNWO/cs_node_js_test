@@ -21,7 +21,8 @@ let appVersion = "1.0.0.3";
 let portNumber = 4000;
 //
 const app = express();
-
+const server = require("http").createServer(app);
+const io = require("socket.io")(server);
 //---------------------------------------------------
 // Handling GET requests for different endpoints
 //---------------------------------------------------
