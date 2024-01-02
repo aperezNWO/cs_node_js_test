@@ -31,7 +31,20 @@ app.use(
     origin: "*",
   }),
 );
+/*
+const express = require('express');
+const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
+// Enable CORS middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Allow all origins for testing
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+*/
 app.get("/Sudoku_Solve_NodeJS", (req, res) => {
   //
   const p_matrix = req.query.p_matrix;
